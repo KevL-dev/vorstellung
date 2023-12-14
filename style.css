@@ -14,6 +14,7 @@
     --bg-color: #250821;
     --second-bg-color: #292e33;
     --big-font: 2.5rem;
+    --normal-font: 2rem;
     --neon-box-shadow: 0 0 .5rem #12f7ff;
     --h2-font: 3rem;
     --font-neon-text-shadow: 0 0 10px rgba(18,247,255,0.3),
@@ -269,4 +270,121 @@ a.bnt:nth-child(2)::before{
     width: 100%;
     max-width: 350px;
     height: auto;
+}
+
+.blob {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    top: 10%;
+}
+
+.blob:nth-child(2){
+    filter: blur(50px);
+}
+
+/*Über mich Section*/
+
+.ueber {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 2em;
+    background: var(--second-bg-color);
+}
+
+.ueber .img-ueber {
+    text-align: center;
+    position: relative;
+}
+
+.ueber .img-ueber img{
+    max-width: 400px;
+    height: auto;
+}
+
+.ueber-content span{
+    color: #fdfdfd;
+    font-size: .8rem;
+    font-weight: 200;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.ueber-content h2{
+    color: var(--hover-color);
+    font-weight: 700;
+    font-size: var(--normal-font);
+}
+
+.ueber-content h3 {
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: .2rem;
+}
+
+.ueber-content p {
+    color: #fdfdfd;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+}
+
+.info-ueber1,
+.info-ueber2,
+.info-ueber3 {
+    background: var(--bg-color);
+    font-size: .5rem;
+    position: absolute;
+    padding: 15px;
+    width: 110px;
+    height: 170px;
+    border-radius: 69% 31% 66% 34% / 21% 30% 70% 79%;
+    display: block;
+    box-shadow: var(--neon-box-shadow);
+    border: 1px solid var(--hover-color);
+    outline: 2px solid var(--bg-color);
+    z-index: 100;
+    animation: morph 6s linear infinite;
+}
+
+.info-ueber1{
+    left: 10%;
+    top: 34%;
+}
+
+.info-ueber2{
+    left: 66%;
+    top: 15%;
+}
+
+.info-ueber3 {
+    left: 61%;
+    top: 70%;
+}
+
+.img-ueber span{
+    color: var(--hover-color);
+    font-size: 600;
+}
+
+
+
+
+
+/*Keyframes*/
+@keyframes morph{
+    0%,
+    100%{
+        border-radius: 70% 60% 70% 30% / 40% 40% 60% 50%;
+    }
+    30%{
+        border-radius: 70% 30% 50% 50% / 30% 30% 70% 50%;
+    }
+    60%{
+        border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
+    }
+    80%{
+        border-radius: 69% 31% 66% 34% / 21% 30% 70% 79%;
+    }
 }
