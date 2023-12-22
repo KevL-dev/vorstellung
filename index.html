@@ -12,17 +12,18 @@
     <header>
         <div class="divheader"><span>K</span>evin.</div>
             <ul class="navlist">
-                <li><a href="#startseite">Startseite</a></li>
-                <li><a href="#uebermich">Über mich</a></li>
-                <li><a href="#faehigkeiten">Fähigkeiten</a></li>
-                <li><a href="#kontakt">Kontakt</a></li>
+                <li><a href="#startseite" class="active" style="--i:1;">Startseite</a></li>
+                <li><a href="#uebermich" style="--i:1;">Über mich</a></li>
+                <li><a href="#faehigkeiten" style="--i:2;">Fähigkeiten</a></li>
+                <li><a href="#portfolio" style="--i:3;">Portfolio</a></li>
+                <li><a href="#kontakt" style="--i:4;">Kontakt</a></li>
             </ul>
             <div id="menu-icon" class="bx bx-menu"></div>
     </header>
 
     <!--Startseite section-->
     <section id="startseite" class="startseite">
-        <div class="content-startseite">
+        <div class="content-startseite .scroll-scale">
             <h1>Hey! Ich heiße Kevin Labindzus</h1>
             <div class="change-text">
                 <h3>Und ich bin</h3>
@@ -57,7 +58,7 @@
             </div>
         </div>
 
-        <div class="startseite-img">
+        <div class="startseite-img .scroll-scale">
             <div class="img-box">
                 <!--BILD-->
                 <img src=""  alt="">
@@ -102,7 +103,7 @@
 
     <!--Über mich section-->
     <section id="ueber" class="ueber">
-        <div class="img-ueber">
+        <div class="img-ueber .scroll-scale">
             <!--BILD-->
             <img src="" alt="">
             <div class="info-ueber1">
@@ -119,7 +120,7 @@
             </div>
         </div>
 
-        <div class="ueber-content">
+        <div class="ueber-content .scroll-scale">
             <span>Ich stelle mich vor</span>
             <h2>Über mich</h2>
             <!--<h3>kurze einleitung</h3>-->
@@ -132,12 +133,12 @@
 
     <!--Service section-->
     <section id="service" class="service">
-        <div class="main-text">
+        <div class="main-text .scroll-scale">
             <span>Was ich für sie erledigen kann</span>
             <h2>Services</h2>
         </div>
 
-        <div class="section-service">
+        <div class="section-service .scroll-bottom">
             <div class="service-box">
                 <i class='bx bx-desktop service-icon'></i>
                 <h3>Frontend-Entwicklung</h3>
@@ -160,13 +161,13 @@
 
     <!--Fähigkeiten section-->
     <section id="skills" class="skills">
-        <div class="main-text">
+        <div class="main-text .scroll-scale">
             <span>technische und berufliche</span>
             <h2>Fähigkeiten</h2>
         </div>
 
         <div class="skill-main">
-            <div class="skill-left">
+            <div class="skill-left .scroll-scale">
                 <h3>Technische Fähigkeiten</h3>
                 <div class="skill-bar">
                     <div class="info">
@@ -207,7 +208,7 @@
             </div>
 
 
-            <div class="skill-right">
+            <div class="skill-right .scroll-scale">
                 <h3>Berufliche Fähigkeiten</h3>
                 <div class="berufliche">
                     <div class="box">
@@ -241,13 +242,76 @@
                 </div>
             </div>
         </div>
+    </section>
 
+    <!--portfolio-->
+    <section id="portfolip" class="portfolio">
+        <div class="main-text .scroll-scale">
+            <span>nkadka</span>
+            <h2>adad</h2>
+        </div>
 
+        <div class="container">
+            <div class="fillter-buttons .scroll-scale">
+                <button class="button" data-filter=".all">Alles</button>
+                <button class="button" data-filter=".produkt">Produkt</button>
+                <button class="button" data-filter=".interaktion">Interaktion</button>
+                <button class="button" data-filter=".web">Web-Entwicklung</button>
+            </div>
+
+            <div class="portfolio-gallery .scroll-bottom">
+                <div class="port-box mix">
+                    <div class="port-image">
+                        <img src="img/code.jpg" alt="">
+                    </div>
+                    <div class="port-content">
+                        <h3>Web-Entwicklung</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis dolore veniam aliquid harum ducimus distinctio temporibus ipsam, necessitatibus ipsum repudiandae in quos incidunt. Molestias possimus accusantium magni laboriosam porro! Praesentium.</p>
+                        <a href="#"><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+
+                <div class="port-box mix">
+                    <div class="port-image">
+                        <img src="img/code2.jpg" alt="">
+                    </div>
+                    <div class="port-content">
+                        <h3>Frontend-Entwicklung</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis dolore veniam aliquid harum ducimus distinctio temporibus ipsam, necessitatibus ipsum repudiandae in quos incidunt. Molestias possimus accusantium magni laboriosam porro! Praesentium.</p>
+                        <a href="#"><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Kontakt section-->
+    <section id="kontakt" class="kontakt">
+        <div class="main-text .scroll-scale">
+            <span>Stellen Sie mir eine Frage</span>
+            <h2>Kontaktieren Sie mich</h2>
+        </div>
+
+        <form action="#" class="scroll-bottom">
+            <input type="text" placeholder="Ihr Name">
+            <input type="text" placeholder="Ihre Email">
+            <input type="text" placeholder="Ihre Adresse">
+            <input type="text" placeholder="Ihre Telefonnummer">
+            <textarea name="" id="" cols="30" rows="10" placeholder="Ihre Nachricht"></textarea>
+            <div class="btn-box formBtn">
+                <button type="submit" class="btn">Nachricht Senden</button>
+            </div>
+        </form>
+    </section>
+
+    <!--Footer section-->
+    <section id="footer-sct" class="footer-sct">
+        <p>Copyright &copy; 2023 by Kevin Labindzus || Alle Rechte vorbehalten.</p>
+        <a href="#startseite"><i class='bx bx-arrow-from-bottom'></i></a>
     </section>
 
 
-
-
+    <script src="mixitup.min.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
